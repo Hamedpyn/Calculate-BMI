@@ -18,6 +18,22 @@ function changInputValue() {
     // calculate the BMI and show it in <p>
     let result = weight / ((height / 100) * (height / 100))
     resultNumber.innerHTML = result.toFixed(1)
+    resultConditions(result)
+}
+
+// show text && number of the result based on some condition
+function resultConditions(result) {
+    if (result <= 18.5) {
+        changingCss('Under weight', 'ffc44d')
+    } else if (result >= 18.5 && result <= 24.9) {
+        changingCss('Normal weight', '0be881')
+    } else if (result >= 25 && result <= 29.9) {
+        changingCss('Over weight', 'ff884d')
+    } else {
+        changingCss('Obese', 'ff5e57')
+    }
+}
+
 // change the text && number of the result
 function changingCss(text, color) {
     resultText.innerHTML = text
