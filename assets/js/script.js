@@ -1,3 +1,7 @@
+// Version 1.0.0
+// Developer : @HAMEDPYN
+// Date : 08 / 11 / 2023 
+
 // Select DOM Elements
 
 let
@@ -17,11 +21,12 @@ function changInputValue() {
     weightText.innerHTML = `${weight} kg`
     // calculate the BMI and show it in <p>
     let result = weight / ((height / 100) * (height / 100))
+    // show one decimal place
     resultNumber.innerHTML = result.toFixed(1)
     resultConditions(result)
 }
 
-// show text && number of the result based on some condition
+// show the text && number of the result based on some condition
 function resultConditions(result) {
     if (result <= 18.5) {
         changingCss('Under weight', 'ffc44d')
@@ -34,7 +39,7 @@ function resultConditions(result) {
     }
 }
 
-// change the text && number of the result
+// change the text && number color of the result
 function changingCss(text, color) {
     resultText.innerHTML = text
     resultNumber.style.color = `#${color}`
