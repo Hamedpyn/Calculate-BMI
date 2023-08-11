@@ -18,6 +18,11 @@ function changInputValue() {
     // calculate the BMI and show it in <p>
     let result = weight / ((height / 100) * (height / 100))
     resultNumber.innerHTML = result.toFixed(1)
+// change the text && number of the result
+function changingCss(text, color) {
+    resultText.innerHTML = text
+    resultNumber.style.color = `#${color}`
+    resultText.style.color = `#${color}`
 }
 
 // call an event to change in second when the input value is changing
