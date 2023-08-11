@@ -15,6 +15,9 @@ function changInputValue() {
     let weight = userWeight.value
     heightText.innerHTML = `${height} cm`
     weightText.innerHTML = `${weight} kg`
+    // calculate the BMI and show it in <p>
+    let result = weight / ((height / 100) * (height / 100))
+    resultNumber.innerHTML = result.toFixed(1)
 }
 
 // call an event to change in second when the input value is changing
